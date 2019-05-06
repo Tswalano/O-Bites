@@ -12,3 +12,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* Style */
+
+.error-body h1 {
+  font-size: 210px;
+  font-weight: 900;
+  color: #282c34;
+  text-shadow: 4px 4px 0 #fff, 6px 6px 0 #6fcff0;
+  line-height: 210px;
+}

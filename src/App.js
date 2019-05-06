@@ -1,25 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import "./App.css";
+
+import Menu from "./Components/Menu";
+import Checkout from "./Components/Checkout";
+import Login from "./Components/Login";
+import { ProtectedRoute } from "./Components/Auth/ProtectedRoute";
+import { NotFoundPage } from "./Components/Page-404";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/login" component={Login} />
+            <ProtectedRoute exact path="/" component={Menu} />
+            <ProtectedRoute path="/checkout" component={Checkout} />
+            <ProtectedRoute path="*" component={NotFoundPage} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
