@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<img src="https://github.com/Tswalano/O-Bites/blob/master/src/logo-alt.png?raw=true" alt="logo" height="10%" width="50%" />
+
 ## Available Scripts
 
 In the project directory, you can run:
